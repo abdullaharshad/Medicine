@@ -1,0 +1,121 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande";
+  background: url(../images/s.jpg );
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+
+select{
+  font-size: 20px;
+}
+
+
+.container.herbals{
+  padding: 50px;
+  font: 14px "Lucida Grande";
+  background: url(../images/de.jpg );
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+.container.chemicals{
+  padding: 50px;
+  font: 14px "Lucida Grande";
+  background: url(../images/h.jpg );
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+.drug{
+  margin:20px auto;
+  display:block;
+  font-size: 34px;
+  width: 370px;
+}
+
+
+.drug label{
+  margin-right: 25px;
+  height: 41px;
+}
+
+
+.name label{
+  height: 41px;
+  margin-right: 39px;
+}
+
+
+.name input{
+  border-radius: 30px;
+  border: 0;
+  padding: 3px 20px;
+  height: 28px;
+}
+
+
+.name input:focus{
+  outline: none;
+  border: 0;
+  padding: 3px 20px;
+  height: 28px;
+}
+
+
+.name{
+  margin:20px auto;
+  display:block;
+  font-size: 34px;
+  width: 400px;
+}
+
+
+a{
+  color: #00B7FF;
+}
+
+
+.container{
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+.result-box{
+  height: 500px;
+  overflow: auto;
+  font-family: monospace;
+  font-size: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  margin: 20px;
+  border-radius:5px;
+}
+
+
+input{
+  font-size: 21px;
+}
+
+
+.button input{
+  margin-left: 500px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  color:black;
+
+}

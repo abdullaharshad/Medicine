@@ -1,0 +1,45 @@
+doctype html
+html
+    head(lang='en')
+        meta(charset='UTF-8')
+        title MAIN PAGE
+        link(rel="stylesheet" type="text/css" href="/css/main.css")
+        script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+        script.
+            $(document).ready(function () {
+              var selectedScheme = '#{table_name}';
+                 $('#ghj').change(function(){
+                $('body').removeClass(selectedScheme).addClass($(this).val());
+                selectedScheme = $(this).val();
+                     $('#result-list').empty()
+              });
+                  });
+
+body.container(class="#{table_name}")
+        form(action='search', method='post')
+            div.drug
+                label DRUG TYPE
+                select(name='table_name' ,value="#{table_name}", id="ghj")
+                    if table_name == 'drugs'
+                        option(selected="true",value='drugs') DRUGS
+                        option(value='chemicals') CHEMICALS
+                        option(value='herbals') HERBALS
+                    else if table_name == 'chemicals'
+                        option(value='drugs') DRUGS
+                        option(selected="true",value='chemicals') CHEMICALS
+                        option(value='herbals') HERBALS
+                    else
+                        option(value='drugs') DRUGS
+                        option(value='chemicals') CHEMICALS
+                        option(selected="true",value='herbals') HERBALS
+            div.name
+                label NAME
+                input(type='text', name='name', value="#{name}")
+            div.button
+                input(type='submit', value='SUBMIT')
+            div.result-box
+                p RESULT:
+                ul(id='result-list')
+                    - each item in list
+                        li.result-item
+                            = item.name

@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>File Uploading Form</title>
+</head>
+
+<body>
+{{success}}
+{{error}}
+<h3>File Upload:</h3>
+Select a file to upload: <br />
+
+<form action = "/file_upload" method = "POST"
+      enctype = "multipart/form-data">
+  <input type="file" name="file" size="50" />
+  <h3>TABLE NAME</h3>
+  <input type="text" name="table_name"/>
+  <br />
+  <input type = "submit" value = "Upload File" />
+</form>
+
+</body>
+</html>
